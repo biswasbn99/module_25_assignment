@@ -36,7 +36,6 @@ class _MyAppHomeScreenState extends State<MyAppHomeScreen> {
         ),
         backgroundColor: Colors.blue,
         elevation: 2,
-        centerTitle: true,
       ),
       body: Stack(
         children: [

@@ -1,27 +1,34 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
+import 'package:module_25_assignment/core/constants/app_constants.dart';
+import 'package:module_25_assignment/features/location_tracker/providers/location_tracker_provider.dart';
 import 'package:module_25_assignment/features/presentations/home_screen.dart';
 import 'package:module_25_assignment/routes.dart';
 import 'package:provider/provider.dart';
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
-  static GlobalKey<NavigatorState> navigatorKey=GlobalKey<NavigatorState>();
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
+  static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      title: 'Module 25 - Assignment ',
-      navigatorKey: MyApp.navigatorKey,
-      onGenerateRoute: AppRoutes.onGenerateRoute,
-      initialRoute: MyAppHomeScreen.name,
-      debugShowCheckedModeBanner: false,
-      
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => LocationTrackerProvider(),
+        ),
+      ],
+      child: MaterialApp(
+        title: AppConstants.appTitle,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+          useMaterial3: true,
+        ),
+        navigatorKey: MyApp.navigatorKey,
+        onGenerateRoute: AppRoutes.onGenerateRoute,
+        initialRoute: MyAppHomeScreen.name,
+      ),
     );
   }
 }
