@@ -50,7 +50,7 @@ This project demonstrates how to implement a battery-efficient, reliable, and sm
 <p align="center">
   <img src="ui_screenshot/Home%20Screen.jpeg" width="340" alt="Real-Time Location Tracker Live Screenshot" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
   <br>
-  <em>Figure 1: Live app running on physical device (Vivo V2116 - Android 13) showing active GPS fix, custom marker, polyline trajectory, and recenter button.</em>
+  <em>Figure 1: Live app running on physical device (Vivo - Android 13) showing active GPS fix, custom marker, polyline trajectory, and recenter button.</em>
 </p>
 
 ---
@@ -233,7 +233,7 @@ Required to enable communication between the application and Google Play Service
 
 - **Code Quality:** Verified with `flutter analyze` — **0 warnings, 0 errors, 0 lints**.
 - **Automated Tests:** Verified with `flutter test` — **All widget tests passing**.
-- **Physical Device Execution:** Validated on **Vivo V2116 (Android 13 / API 33)** with real-time GPS signal, accurate polyline creation, and smooth camera animation.
+- **Physical Device Execution:** Validated on **Vivo  (Android 13 / API 33)** with real-time GPS signal, accurate polyline creation, and smooth camera animation.
 
 ---
 
@@ -257,6 +257,5 @@ Here are recommended future features to take this application to the next level:
 ## 👨‍💻 Author & Acknowledgments
 
 - **Developer:** BN Biswas
-- **Course:** Ostad Flutter Application Development
-- **Module:** Module 25 Assignment (Google Maps and Geolocator)
+
 
